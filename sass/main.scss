@@ -1,3 +1,32 @@
-* {
-    color: red;
+@import './utils/vars';
+@import './base/reset';
+@import './base/common';
+@import './utils/hidden';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+@import './components/container';
+@import './components/pre-title';
+@import './components/title';
+@import './components/btn';
+@import './components/modal';
+@import './components/top-btn';
+@import './components/logo';
+@import './components/form';
+
+@import './layout/header';
+@import './layout/mob-menu';
+@import './layout/hero';
+@import './layout/about';
+@import './layout/activity';
+@import './layout/reasons';
+@import './layout/guarantees';
+@import './layout/partnerzy';
+// @import './layout/contact-wrap';
+@import './layout/contacts';
+@import './layout/footer';
+
+#map {
+  height: 400px; /* або інше значення висоти */
+  width: 100%; /* на всю ширину контейнера */
 }
