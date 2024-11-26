@@ -1,0 +1,91 @@
+.about {
+  padding: 50px 0px;
+  background-color: rgba(196, 196, 196, 0.3);
+  @include desk {
+    padding: 130px 0;
+  }
+}
+
+.about-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__container {
+  display: flex;
+  padding: 0 30px;
+}
+
+.about-list {
+  display: none;
+  flex-shrink: 0;
+  margin-right: 64px;
+  @include tab {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @include desk {
+    flex-direction: row;
+  }
+}
+
+.about-wrap__pre-title {
+  margin-bottom: 20px;
+  &::before {
+    content: '';
+
+    width: 60px;
+    height: 1px;
+
+    margin-right: 20px;
+    background-color: $second-title-color;
+  }
+}
+
+.about-wrap__title {
+  color: $second-title-color;
+  margin-bottom: 20px;
+}
+
+.about-wrap__after-title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.about-wrap__text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+  margin-bottom: 40px;
+  text-align: justify;
+  &--accent {
+    color: $accent-color;
+    font-weight: bold;
+  }
+  @include desk {
+    margin-bottom: 25px;
+  }
+}
+
+.about-wrap__btn {
+  color: $second-btn-color;
+  margin: 0 auto;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.about-list__item:first-child {
+  margin-bottom: 44px;
+  @include desk {
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 108, 0, 0.7);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+#myBtn:hover {
+  background-color: var(--accent-color);
+}
+
+#myBtn.red {
+  background-color: rgba(255, 108, 0, 0.7);
+}

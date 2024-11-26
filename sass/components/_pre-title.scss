@@ -1,0 +1,26 @@
+.pre-title {
+  text-transform: uppercase;
+  @extend %align-list;
+  @include font(11px, 600, 21px, 0.1em);
+  @include tab {
+    @include font(11px, null, 15px, null);
+  }
+}
+
+.pre-title--light-theme {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.pre-title--dark-theme {
+  color: $first-text-color;
+}
+
+.pre-title::before {
+  content: '';
+
+  width: 60px;
+  height: 1px;
+
+  margin-right: 20px;
+  background-color: currentColor;
+}

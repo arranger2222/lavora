@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lavora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcbsAu1c13vA7HFxNX7L_wuJTuEUTWRIQ&callback=initMap&libraries=marker"
+    ></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+
+    <header>
+      <div class="logo">
+        <a href="#" class="logo__link">
+          <img
+            src="./img/logo_lavora_black.png"
+            alt="Logo"
+            class="logo__img"
+            width="170"
+          />
+          <p class="logo__text">agencja pracy</p>
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list visually-hidden">
+          <li class="nav__item">
+            <a href="#" class="nav__link">o firmie</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">nasze usługi</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">gwarancje</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Hero -->
+
+      <section class="hero">
+        <h2 class="hero__title visually-hidden">hero title</h2>
+        <div class="hero__content"></div>
+      </section>
+      <section class="form">
+        <h2 class="form__title visually-hidden">form title</h2>
+        <div class="form__content">
+          <h3>Pracuj z nami</h3>
+          <form>
+            <label for="name">Imię</label>
+            <input type="text" id="name" name="name" required />
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone" required />
+            <label for="message">Wiadomość</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">WYSŁAĆ</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- O firmie -->
+
+      <section class="o_firmie about" id="about">
+        <h2 class="o_firmie__title visually-hidden">o firmie title</h2>
+        <div class="o_firmie__content container about__container">
+          <p class="o_firmie__subtitle">
+            <span class="company-name">LAVORA HR</span> - Agencja Pracy
+            Tymczasowej
+          </p>
+          <p class="o_firmie__text">
+            Wspieramy firmy w uzupełnianiu braków kadrowych oraz oferujemy pomoc
+            w poszukiwaniu pracy. Działamy na terenie całej Polski, z główną
+            siedzibą w Poznaniu.
+          </p>
+
+          <p class="o_firmie__text">
+            Jesteśmy certyfikowaną Agencją Pracy Tymczasowej wpisaną do
+            Krajowego Rejestru Sądowego pod
+            <span class="text--accent">nr. 0001124642</span>
+          </p>
+
+          <p class="o_firmie__text">
+            Na polskim rynku pracy wciąż jest za mało dostępnych pracowników,
+            dlatego na niedobory kadrowe cierpią m.in. takie branże, jak:
+            produkcja, logistyka, budownictwo, handel czy usługi. Jako agencja
+            pracy pomagamy przedsiębiorcom w znalezieniu wykwalifikowanych
+            pracowników z zagranicy. Dzięki temu ich firmy mogą się skupić na
+            swojej podstawowej działalności, nie martwiąc się o niedobór
+            personelu.
+          </p>
+        </div>
+
+        <div class="o_firmie__photo">
+          <ul class="o_firmie__photo-list">
+            <li class="o_firmie__photo-item">
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/ds/o_firmie_woman-worker_ds_325@1x.jpeg 1x,
+                    ./img/ds/o_firmie_woman-worker_ds_325@2x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./img/tb/o_firmie_woman-worker_tb_270@1x.jpeg 1x,
+                    ./img/tb/o_firmie_woman-worker_tb_270@2x.jpeg 2x
+                  "
+                />
+                <img
+                  src="./img/o_firmie1.jpeg"
+                  alt="woman working"
+                  class="o_firmie__img"
+                />
+              </picture>
+            </li>
+            <li class="o_firmie__photo-item">
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/ds/o_firmie_man-worker_ds_325@1x.jpeg 1x,
+                    ./img/ds/o_firmie_man-worker_ds_325@2x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./img/tb/o_firmie_man-worker_tb_270@1x.jpeg 1x,
+                    ./img/tb/o_firmie_man-worker_tb_270@2x.jpeg 2x
+                  "
+                />
+                <img
+                  src="./img/o_firmie1.jpeg"
+                  alt="woman working"
+                  class="o_firmie__img"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="activity section">
+        <div class="container activity__container">
+          <p class="activity-pre-title pre-title">
+            Dbamy o naszych pracowników.
+          </p>
+          <h2 class="activity-title section-title">Nasza działalność</h2>
+          <div class="activity-wrap">
+            <ul class="activity-list activity-list-left list">
+              <li class="activity-item">
+                <p class="activity-text">
+                  Kwaterujemy i zapewniamy własnym transportem
+                </p>
+              </li>
+              <li class="activity-item">
+                <p class="activity-text">
+                  Legalizujemy pobyt i zatrudniamy cudzoziemców
+                </p>
+              </li>
+              <li class="activity-item">
+                <p class="activity-text">
+                  Rzetelno podchodzimy do procesu rekrutacji
+                </p>
+              </li>
+              <li class="activity-item">
+                <p class="activity-text">
+                  Wspieramy stały kontakt z koordynatorem projektu
+                </p>
+              </li>
+            </ul>
+            <ul class="activity-list activity-list-right list">
+              <li class="activity-item">
+                <p class="activity-text">
+                  Każdy pracownik otrzymuje osobistego kierownika projektu
+                </p>
+              </li>
+              <li class="activity-item">
+                <p class="activity-text">
+                  Uruchamiamy projekty już od pięciu osób
+                </p>
+              </li>
+              <li class="activity-item">
+                <p class="activity-text">
+                  Minimalna ilość godzin w miesiącu na pracownika: 200
+                </p>
+              </li>
+              <li class="activity-item">
+                <p class="activity-text">Wsparcie i konsultacje - 24/7</p>
+              </li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="activity-btn btn visually-hidden"
+            data-modal-open
+          >
+            Znajdź pracę
+          </button>
+        </div>
+      </section>
+      <!-- Reasons -->
+      <section class="reasons section" id="reasons">
+        <div class="container reasons-container">
+          <div class="reasons-right">
+            <p class="reasons-pre-title pre-title pre-title-dark-theme">
+              Zwłaszcza podchodzimy do każdego procesu
+            </p>
+            <h2 class="reasons-title section-title">
+              Kierujemy swoje usługi do osób poszukujących pracy oraz do firm
+              chcących pozyskać pracowników do realizacji swoich inwestycji.
+            </h2>
+            <p class="reasons-after-title">
+              Pozyskujemy pracowników z Ukrainy, Gruzji, Białorusi, Mołdawii i
+              innych krajów bloku wschodniego. Zapewniamy koordynatora zespołu,
+              który kontaktuje się z pracownikami.
+            </p>
+          </div>
+
+          <div class="reasons-left">
+            <ul class="reasons-list list">
+              <li class="reasons-item">
+                <span class="reasons-count">600</span>
+                <p class="reasons-item-text">Pracowników zatrudnionych</p>
+              </li>
+              <li class="reasons-item">
+                <span class="reasons-count">50</span>
+                <p class="reasons-item-text">Aktywnych projektów</p>
+              </li>
+              <li class="reasons-item">
+                <span class="reasons-count">20</span>
+                <p class="reasons-item-text">Wniosków tygodniowo</p>
+              </li>
+              <li class="reasons-item reasons-item-dif">
+                <span class="reasons-count">300</span>
+                <p class="reasons-item-text">Wolnych miejsc pracy</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Guarantees -->
+      <section class="guarantees section" id="guarantees">
+        <div class="garantees-container container">
+          <div class="garantees-content-wrap">
+            <p class="guarantees__pre-title pre-title pre-title--dark-theme">
+              Gwarantujemy
+            </p>
+            <h2 hidden>zasadą NBD Grou</h2>
+            <p class="guarantees-after-title">
+              Gwarantujemy profesjonalne wsparcie w pozyskaniu pracowników.
+              Załatwimy wszelkie wymagane formalności, pomagamy na każdym etapie
+              rekrutacji, od zatrudnienia po kompleksową obsługę w trakcie
+              trwania kontraktu.
+            </p>
+            <p class="guarantees-after-title">
+              Pierwszą zasadą NBD Group jest to, że traktujemy naszych
+              pracowników tak, jak sami chcielibyśmy być traktowani, pracując w
+              innym kraju. Oznacza to, że dobrze organizujemy im pracę,
+              zapewniamy uczciwe, odpowiednie wynagrodzenie, pomagamy w
+              załatwieniu formalności.
+            </p>
+            <p class="guarantees-after-title">
+              Tworzymy grupę kompetentnych oraz dynamicznie działających osób. W
+              codziennych zadaniach nacisk kładziemy na sprawną organizację
+              pracy przy zachowaniu elastycznych form działania dopasowaną
+              indywidualnie dla każdego Użytkownika.
+            </p>
+            <button
+              type="button"
+              class="guarantees__btn btn modal-open"
+              data-modal-open
+            >
+              Znajdź pracę
+            </button>
+          </div>
+          <ul class="guarantees-list list">
+            <li class="guarantees-list__item">
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/ds/gwarantujemy_man-worker_ds_325@1x.jpeg 1x,
+                    ./img/ds/gwarantujemy_man-worker_ds_325@2x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./img/tb/gwarantujemy_man-worker_tb_270@1x.jpeg 1x,
+                    ./img/tb/gwarantujemy_man-worker_tb_270@2x.jpeg 2x
+                  "
+                />
+                <img
+                  src="./img/gwarantujemy_1.jpeg"
+                  alt="woman working"
+                  class="o_firmie__img"
+                />
+              </picture>
+            </li>
+            <li class="guarantees-list__item">
+              <picture>
+                <source
+                  media="(min-width:1200px)"
+                  srcset="
+                    ./img/ds/gwarantujemy_woman-worker_ds_325@1x.jpeg 1x,
+                    ./img/ds/gwarantujemy_woman-worker_ds_325@2x.jpeg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./img/tb/gwarantujemy_woman-worker_tb_270@1x.jpeg 1x,
+                    ./img/tb/gwarantujemy_woman-worker_tb_270@2x.jpeg 2x
+                  "
+                />
+                <img
+                  src="./img/gwarantujemy_2.jpeg"
+                  alt="woman working"
+                  class="o_firmie__img"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Nasi partnerzy -->
+      <section class="nasi partnerzy">
+        <h2 hidden>partnerzy</h2>
+        <p class="activity-pre-title pre-title">nasi partnerzy</p>
+        <ul class="partnerzy-list list">
+          <li class="partnerzy-list__item">
+            <a href="#" class="partnerzy-list__link">
+              <img
+                src="./img/partnerzy1.png"
+                width="88"
+                alt="partnerzy"
+                class="partnerzy-list__img"
+              />
+              <h3 class="partnerzy-list__title">RHENUS logistics</h3>
+            </a>
+          </li>
+          <li class="partnerzy-list__item">
+            <a href="#" class="partnerzy-list__link">
+              <img
+                src="./img/partnerzy2.png"
+                width="53"
+                alt="partnerzy"
+                class="partnerzy-list__img"
+              />
+              <h3 class="partnerzy-list__title">DPD Polska</h3>
+            </a>
+          </li>
+          <li class="partnerzy-list__item">
+            <a href="#" class="partnerzy-list__link">
+              <img
+                src="./img/partnerzy3.png"
+                width="56"
+                alt="partnerzy"
+                class="partnerzy-list__img"
+              />
+              <h3 class="partnerzy-list__title">Grupa Żabka</h3>
+            </a>
+          </li>
+          <li class="partnerzy-list__item">
+            <a href="#" class="partnerzy-list__link">
+              <img
+                src="./img/partnerzy4.png"
+                width="40"
+                alt="partnerzy"
+                class="partnerzy-list__img"
+              />
+              <h3 class="partnerzy-list__title">KON-PLAST GRUPA</h3>
+            </a>
+          </li>
+          <li class="partnerzy-list__item">
+            <a href="#" class="partnerzy-list__link">
+              <img
+                src="./img/partnerzy5.png"
+                width="40"
+                alt="partnerzy"
+                class="partnerzy-list__img"
+              />
+              <h3 class="partnerzy-list__title">Firma PHU „KUBIK”</h3>
+            </a>
+          </li>
+          <li class="partnerzy-list__item">
+            <a href="#" class="partnerzy-list__link">
+              <img
+                src="./img/partnerzy6.png"
+                width="40"
+                alt="partnerzy"
+                class="partnerzy-list__img"
+              />
+              <h3 class="partnerzy-list__title">IN POST</h3>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="map">
+        <div id="map"></div>
+
+        <!-- </div> -->
+      </section>
+      <section class="contact">
+        <section class="contacts-section section" id="contact">
+          <div class="contact-wrap">
+            <div class="contacts-container container">
+              <div class="contacts-left">
+                <h2 class="adress-title">Kontakt</h2>
+                <address>
+                  <ul class="contacts-list list">
+                    <li class="contacts-item">
+                      <a
+                        class="contacts-item__link link-adress"
+                        href="https://goo.gl/maps/J15sbLDSEzuWAUvs8"
+                        target="_blank"
+                        >ul.Zwierzyniecka 10/313 <br />
+                        <span class="adress-tab">60-813 Poznań</span></a
+                      >
+                    </li>
+                    <li class="contacts-item">
+                      <a
+                        class="contacts-item__link link-phone"
+                        href="tel:+48733130895"
+                        >+48 733 130 895</a
+                      >
+                    </li>
+                    <li class="contacts-item">
+                      <a
+                        class="contacts-item__link link-phone"
+                        href="tel:+48574827097"
+                        >+48 574 827 097</a
+                      >
+                    </li>
+                    <li class="contacts-item">
+                      <a
+                        class="contacts-item__link link-phone"
+                        href="tel:+48514275060"
+                        >+48 514 275 060</a
+                      >
+                    </li>
+                    <li class="contacts-item">
+                      <a
+                        class="contacts-item__link link-letter"
+                        href="mailto:nbdgroup@ukr.net"
+                        >nbdgroup@ukr.net</a
+                      >
+                    </li>
+                  </ul>
+                </address>
+              </div>
+              <div class="contacts-right">
+                <div class="schedule-container">
+                  <p
+                    class="contacts-pre-title pre-title pre-title--light-theme"
+                  >
+                    grafik pracy
+                  </p>
+                  <p class="schedule">Pon.- Pt. 9:00 - 17:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

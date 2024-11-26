@@ -1,0 +1,138 @@
+.contacts-section {
+  margin-top: -5px;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.9),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../../img/mb/contacts-img_320_mb_@1x.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  @include desk {
+    width: 50%;
+    height: 600px;
+    margin-top: 0;
+  }
+}
+
+.map {
+  @include desk {
+    width: 50%;
+    height: 600px;
+  }
+}
+
+.contact-wrap {
+  padding: 85px 0;
+  // background-color: #191c26;
+  // background-image: url(../images/tab/contact_bg_tb@.png);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: center;
+
+  @include tab {
+    padding: 45px 0;
+  }
+
+  @include desk {
+    height: 100%;
+  }
+}
+
+.adress-title {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.1px;
+  margin-bottom: 20px;
+}
+
+.adress-tab {
+  margin-left: 35px;
+}
+
+.contacts-container {
+  padding: 0 45px;
+  @include tab {
+    display: flex;
+  }
+  @include desk {
+    flex-direction: column;
+    padding-left: 100px;
+    padding-top: 40px;
+  }
+}
+
+.contacts-left,
+.contacts-right {
+  width: 100%;
+}
+
+.contacts-right {
+  display: flex;
+  align-items: center;
+  @include desk {
+    margin-top: 60px;
+  }
+}
+
+.contacts-item__link {
+  color: #9da4bd;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: calc(30 / 18);
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+}
+
+.contacts-item {
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}
+
+.link-adress::before {
+  content: url(../../img/map-pin.png);
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.link-phone::before {
+  content: url(../../img/phone.png);
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+.link-letter::before {
+  content: url(../../img/mail.png);
+  margin-right: 10px;
+  position: relative;
+  top: 5px;
+}
+
+.contacts__pre-title {
+  color: $header-text-color;
+  margin-bottom: 30px;
+  @include tab {
+    margin: 0;
+  }
+}
+
+.schedule {
+  font-size: 18px;
+  color: #9da4bd;
+  letter-spacing: 2%;
+  line-height: calc(30 / 18);
+  @include desk {
+    margin-top: 20px;
+  }
+}
+
+.map-and-contacts-wrap {
+  @include desk {
+    display: flex;
+  }
+}

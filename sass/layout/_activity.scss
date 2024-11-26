@@ -1,0 +1,111 @@
+.activity {
+  background-color: #111319;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.9),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../../img/mb/about-img_320_mb_320@1x.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 85px 0;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @include tab {
+    padding: 100px 0;
+  }
+}
+
+.activity__container {
+  padding: 0 30px;
+}
+
+.activity-pre-title {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.activity-title {
+  color: $first-title-color;
+  margin-bottom: 20px;
+  font-size: 20px;
+  // font-weight: 700;
+  color: rgb(254, 204, 187);
+}
+
+.activity-wrap {
+  // padding: 0px 16px;
+  // margin-bottom: 50px;
+  // background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  @include tab {
+    padding: 30px 75px;
+  }
+  @include desk {
+    display: flex;
+    padding: 0;
+  }
+}
+
+.activity-list {
+  width: 100%;
+
+  @include tab {
+    width: 100%;
+  }
+  @include desk {
+    width: 50%;
+    padding: 30px 75px;
+  }
+}
+
+.activity-list-right {
+  margin-top: 30px;
+
+  @include desk {
+    padding-left: 40px;
+    padding-right: 20px;
+    height: 100%;
+    margin-top: 0;
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.activity-item {
+  margin-top: 30px;
+}
+
+.activity-text {
+  font-size: 14px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #fff;
+
+  @include tab {
+    font-size: 18px;
+  }
+}
+
+.activity-text:first-child {
+  order: -1;
+}
+
+.activity-btn {
+  color: $first-btn-color;
+  margin: 0 auto;
+  display: block;
+}
+
+.activity-btn:hover,
+.activity-btn:focus {
+  color: $accent-color;
+}
